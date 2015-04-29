@@ -14,7 +14,7 @@ public:
   inline const Vector2 operator +( const Vector2 &) const;
   inline const Vector2 operator *( float) const;
 
-private:
+private:	
   float m_x, m_y;
 };
 
