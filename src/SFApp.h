@@ -45,6 +45,8 @@ private:
   list<shared_ptr<SFAsset> > game_overs; // adding game over to list
   list<shared_ptr<SFAsset> > life_game_overs; // adding game over to list
   list<shared_ptr<SFAsset> > wins; // adding game over to list
+ // list<shared_ptr<SFAsset> > stars; // adding stars to list
+
 
   //handles the lifes for aliens and players.
   int alienLives = 36;

@@ -4,13 +4,21 @@ SFApp::SFApp(std::shared_ptr<SFWindow> window) : fire(0), is_running(true), sf_w
   int canvas_w, canvas_h;
   SDL_GetRendererOutputSize(sf_window->getRenderer(), &canvas_w, &canvas_h);
  
-//set the player in the middle of the game board
 
+/* could not load star since the error, "Could not load asset of type 12" came up
+  app_box = make_shared<SFBoundingBox>(Vector2(canvas_w, canvas_h), canvas_w, canvas_h);
+  auto stars  = make_shared<SFAsset>(SFASSET_STAR, sf_window);
+  auto star_pos = Point2(canvas_w, canvas_h);
+  stars->SetPosition(star_pos);
+*/
+
+//set the player in the middle of the game board
   app_box = make_shared<SFBoundingBox>(Vector2(canvas_w, canvas_h), canvas_w, canvas_h);
   player  = make_shared<SFAsset>(SFASSET_PLAYER, sf_window);
   auto player_pos = Point2(canvas_w / 2.0f, 88.0f);
   player->SetPosition(player_pos);
   
+
 
   const int number_of_aliens = 9;
   for(int i=0; i<number_of_aliens; i++) {

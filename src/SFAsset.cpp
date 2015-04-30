@@ -46,7 +46,12 @@ SFAsset::SFAsset(SFASSETTYPE type, std::shared_ptr<SFWindow> window): type(type)
   case SFASSET_WIN:
     sprite = IMG_LoadTexture(sf_window->getRenderer(), "assets/win.png");
     break;
-
+/*
+//Stars assets
+  case SFASSET_STAR:
+    sprite = IMG_LoadTexture(sf_window->getRenderer(), "assets/star.png");
+    break;
+*/
 }
   if(!sprite) {
     cerr << "Could not load asset of type " << type << endl;
